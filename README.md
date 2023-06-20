@@ -68,7 +68,7 @@ python manage.py test
 ## Quick Note:-
  you can register and login the user and get refresh token and access token and  with same login by using admin credentials you can get admin access token.
 
-## You can  superadmin using this command
+## You can create superadmin using this command
 ```bash
 python manage.py createsuperuser
 ```
