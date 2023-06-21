@@ -72,3 +72,23 @@ python manage.py test
 ```bash
 python manage.py createsuperuser
 ```
+
+
+## You can run the project using docker
+
+## Build the Docker image using the following command:
+```bash
+    docker build -t event_management_app .
+
+```
+
+## Start a PostgreSQL container:
+```bash
+docker run -d --name event_management_db -p 5432:5432 -e POSTGRES_DB=mydatabase -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=mypassword postgres
+```
+
+# Run the docker image
+```bash
+docker run -d -p 8000:8000 --name event_management_container --link event_management_db:postgres event_management_app
+
+```
